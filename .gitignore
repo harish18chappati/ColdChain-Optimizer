@@ -1,8 +1,8 @@
-@"
 .venv/
 __pycache__/
 *.pyc
 *.exe
+coldchain_runner
+coldchain_mst
 .env
 node_modules/
-"@ | Set-Content .gitignore

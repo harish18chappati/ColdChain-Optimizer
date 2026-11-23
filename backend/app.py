@@ -1,12 +1,24 @@
 import json
 import subprocess
+import sys
 from pathlib import Path
 from flask import Flask, request, jsonify, send_from_directory
 
 # Base paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_DIR = BASE_DIR / "frontend"
-RUNNER_EXE = BASE_DIR / "coldchain_runner.exe"
+
+# Cross-platform runner binary resolution:
+# Windows: coldchain_runner.exe | Linux: coldchain_runner
+RUNNER_FILENAME = "coldchain_runner.exe" if sys.platform.startswith("win") else "coldchain_runner"
+RUNNER_EXE = BASE_DIR / RUNNER_FILENAME
+
+# Fallback: if primary executable is not found, check alternate extension
+if not RUNNER_EXE.exists():
+    alt_filename = "coldchain_runner" if sys.platform.startswith("win") else "coldchain_runner.exe"
+    alt_path = BASE_DIR / alt_filename
+    if alt_path.exists():
+        RUNNER_EXE = alt_path
 
 app = Flask(__name__)
 
