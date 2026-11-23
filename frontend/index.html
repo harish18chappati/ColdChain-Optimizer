@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ColdChain Optimizer connects warehouses, pharmacies, and hospitals into a resilient, minimum-cost cold distribution network using Kruskal's and Prim's minimum spanning tree algorithms."
+    />
+    <title>ColdChain Optimizer — Smarter Connections. Lower Distribution Costs.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23242A30'/%3E%3Ccircle cx='8' cy='16' r='3.2' fill='%23FF6542'/%3E%3Ccircle cx='20' cy='8.5' r='2.5' fill='%23F7F8F9'/%3E%3Ccircle cx='24' cy='22.5' r='2.5' fill='%23F7F8F9'/%3E%3Cpath d='M11 15 L17.5 10 M11 17 L21.5 21.5' stroke='%23FF6542' stroke-width='1.8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Navigation Bar: Premium Dark Translucent -->
+    <header class="site-header" id="site-header">
+      <div class="container header-bar">
+        <a class="logo" href="#home" aria-label="ColdChain Optimizer Home">
+          <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <rect width="32" height="32" rx="8" fill="#242A30" />
+            <circle cx="8" cy="16" r="3.2" fill="#FF6542" />
+            <circle cx="19" cy="8.5" r="2.5" fill="#F7F8F9" />
+            <circle cx="24" cy="22.5" r="2.5" fill="#F7F8F9" />
+            <path
+              d="M10.8 14.8 L16.8 10 M10.8 17.2 L21.6 21.6"
+              stroke="#FF6542"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              fill="none"
+            />
+          </svg>
+          <span class="logo-word">ColdChain <span class="logo-sub">Optimizer</span></span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="#home" aria-current="page">Home</a></li>
+            <li><a class="nav-link" href="#workspace">Workspace</a></li>
+            <li><a class="nav-link" href="#algorithms">Algorithms</a></li>
+            <li><a class="nav-link" href="#comparison">Comparison</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-nav" href="#workspace">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero Section with Supplied Refrigerated Truck & Warehouse Background -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-bg-overlay" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <!-- Hero Copy (LEFT) -->
+          <div class="hero-copy">
+            <div class="hero-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span class="badge-text">COLD-CHAIN DISTRIBUTION</span>
+            </div>
+
+            <h1 id="hero-title" class="hero-heading">
+              Smarter Connections.<br />
+              <span class="hero-highlight">Lower Distribution Costs.</span>
+            </h1>
+
+            <p class="hero-lede">
+              ColdChain Optimizer connects warehouses, pharmacies, and hospitals into one resilient, temperature-compliant
+              distribution network. Kruskal’s and Prim’s minimum spanning tree algorithms eliminate redundant corridors
+              so every facility stays reached while total distribution cost is mathematically minimized.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#workspace">
+                <span>Explore Workspace</span>
+                <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a class="btn btn-secondary" href="#algorithms">
+                <span>Learn Algorithms</span>
+              </a>
+            </div>
+
+            <div class="hero-facts">
+              <div class="fact-pill">
+                <span class="fact-label">Graph</span>
+                <span class="fact-value">Undirected & Weighted</span>
+              </div>
+              <div class="fact-pill">
+                <span class="fact-label">Methods</span>
+                <span class="fact-value">Kruskal & Prim</span>
+              </div>
+              <div class="fact-pill">
+                <span class="fact-label">Target</span>
+                <span class="fact-value">Minimum Spanning Tree</span>
+              </div>
+              <div class="fact-pill">
+                <span class="fact-label">Integrity</span>
+                <span class="fact-value">2°C – 8°C Monitored</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Network Visualization Model (RIGHT: Dark Translucent Glass-Style Card) -->
+          <div class="hero-visual">
+            <figure class="network-card glass-card">
+              <div class="network-card-header">
+                <div class="header-status">
+                  <span class="status-indicator" aria-hidden="true"></span>
+                  <span class="status-text">Network Topology</span>
+                </div>
+                <div class="network-algo-controls" id="algo-controls" role="group" aria-label="Algorithm Selection">
+                  <button type="button" class="btn-algo active" id="btn-run-kruskal" data-algo="kruskal">Run Kruskal</button>
+                  <button type="button" class="btn-algo" id="btn-run-prim" data-algo="prim">Run Prim</button>
+                </div>
+                <div class="network-mode-controls" id="mode-controls" role="group" aria-label="Execution Mode">
+                  <button type="button" class="btn-mode active" id="btn-mode-instant" data-mode="instant" title="Instant MST Solution">Instant</button>
+                  <button type="button" class="btn-mode" id="btn-mode-step" data-mode="step" title="Step-by-Step Execution">Step-by-Step</button>
+                </div>
+                <button type="button" class="btn-builder-toggle" id="btn-toggle-builder" title="Custom Network Input" aria-expanded="false">
+                  <span>✏️ Custom Graph</span>
+                </button>
+                <div class="header-badge" id="algo-badge">Kruskal MST</div>
+              </div>
+
+              <!-- Status Alert for Errors or Disconnected Graphs -->
+              <div class="network-alert hidden" id="network-alert" role="alert" aria-live="polite"></div>
+
+              <!-- Collapsible Custom Network Builder Drawer -->
+              <div class="network-custom-drawer hidden" id="custom-drawer" aria-hidden="true">
+                <div class="custom-drawer-header">
+                  <div class="drawer-title-wrap">
+                    <span class="drawer-title">Custom Cold-Chain Network</span>
+                    <span class="drawer-subtitle">Configure facilities and transit corridors</span>
+                  </div>
+                  <div class="drawer-actions">
+                    <button type="button" class="btn-drawer-action" id="btn-load-sample">Load Sample Network</button>
+                    <button type="button" class="btn-drawer-close" id="btn-close-drawer" aria-label="Close Builder">&times;</button>
+                  </div>
+                </div>
+
+                <!-- Validation Error Notice -->
+                <div class="custom-val-error hidden" id="custom-val-error" role="alert"></div>
+
+                <div class="custom-drawer-body">
+                  <!-- Section 1: Facilities Management -->
+                  <div class="custom-col">
+                    <div class="custom-col-header">
+                      <span class="custom-col-title">1. Facilities (<span id="custom-facility-count">6</span>)</span>
+                    </div>
+                    <div class="custom-input-row">
+                      <input type="text" id="input-facility-name" class="custom-input" placeholder="Facility name (e.g. City Hospital)" maxlength="32" />
+                      <button type="button" class="btn-add-item" id="btn-add-facility">+ Add Facility</button>
+                    </div>
+                    <div class="custom-chips-list" id="custom-facilities-list">
+                      <!-- Dynamic facility chips -->
+                    </div>
+                  </div>
+
+                  <!-- Section 2: Road Corridors Management -->
+                  <div class="custom-col">
+                    <div class="custom-col-header">
+                      <span class="custom-col-title">2. Road Corridors (<span id="custom-road-count">9</span>)</span>
+                    </div>
+                    <div class="custom-input-row custom-road-row">
+                      <select id="select-road-src" class="custom-select" aria-label="Source facility"></select>
+                      <span class="custom-arrow">&harr;</span>
+                      <select id="select-road-dest" class="custom-select" aria-label="Destination facility"></select>
+                      <input type="number" id="input-road-weight" class="custom-input custom-input-weight" placeholder="Weight" min="1" max="999999" aria-label="Road transit weight" />
+                      <button type="button" class="btn-add-item" id="btn-add-road">+ Add Road</button>
+                    </div>
+                    <div class="custom-chips-list custom-roads-list" id="custom-roads-list">
+                      <!-- Dynamic road chips -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- High-Quality Network SVG with Warehouses, Pharmacies, Hospitals & Weighted Edges -->
+              <div class="network-canvas-wrapper">
+                <svg
+                  class="network-canvas"
+                  viewBox="0 0 520 405"
+                  role="img"
+                  aria-labelledby="net-title net-desc"
+                >
+                  <title id="net-title">Cold-chain distribution network topology model</title>
+                  <desc id="net-desc">
+                    Explanatory facility network model showing warehouses, pharmacies, and hospitals connected by weighted candidate edges and highlighted minimum spanning tree lanes.
+                  </desc>
+
+                  <defs>
+                    <!-- Background Grid Pattern -->
+                    <pattern id="net-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(247, 248, 249, 0.07)" stroke-width="0.8" />
+                    </pattern>
+
+                    <!-- Glow and Drop Shadows -->
+                    <filter id="node-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.35" />
+                    </filter>
+                    <filter id="badge-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.3" />
+                    </filter>
+                  </defs>
+
+                  <!-- Technical Dark Canvas Background -->
+                  <rect width="100%" height="100%" fill="rgba(24, 28, 33, 0.65)" rx="12" />
+                  <rect width="100%" height="100%" fill="url(#net-grid)" rx="12" />
+
+                  <!-- Dynamic Graph Content Group (Preserves Hand-crafted Sample & Dynamic Custom Graph) -->
+                  <g id="network-graph-content">
+                  <!-- Candidate / Alternate Edges (Dashed Muted Lines) -->
+                  <g class="edges-discarded" stroke="#71808B" stroke-width="1.8" stroke-dasharray="4 5" opacity="0.65">
+                    <!-- Warehouse A to Warehouse B -->
+                    <line data-edge="warehouse-a,warehouse-b" x1="95" y1="75" x2="425" y2="70" />
+                    <!-- Pharmacy South to Hospital Beta -->
+                    <line data-edge="pharmacy-south,hospital-beta" x1="105" y1="270" x2="260" y2="325" />
+                    <!-- Hospital Alpha to Hospital Beta -->
+                    <line data-edge="hospital-alpha,hospital-beta" x1="425" y1="255" x2="260" y2="325" />
+                    <!-- Pharmacy North to Hospital Alpha -->
+                    <line data-edge="pharmacy-north,hospital-alpha" x1="260" y1="140" x2="425" y2="255" />
+                  </g>
+
+                  <!-- Discarded Edge Weight Tags -->
+                  <g class="weight-tags-discarded" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="500">
+                    <!-- W1 - W2: 28km (Midpoint 260, 73 -> Placed at 260, 56) -->
+                    <g data-edge="warehouse-a,warehouse-b" transform="translate(260, 56)" filter="url(#badge-shadow)">
+                      <rect x="-35" y="-10" width="70" height="20" rx="10" fill="rgba(36, 42, 48, 0.92)" stroke="#71808B" stroke-width="1" />
+                      <text x="0" y="4" text-anchor="middle" fill="#E5E9EC">28km · Cycle</text>
+                    </g>
+                    <!-- P2 - H2: 21km (Midpoint 183, 298 -> Placed at 183, 308) -->
+                    <g data-edge="pharmacy-south,hospital-beta" transform="translate(183, 308)" filter="url(#badge-shadow)">
+                      <rect x="-32" y="-10" width="64" height="20" rx="10" fill="rgba(36, 42, 48, 0.92)" stroke="#71808B" stroke-width="1" />
+                      <text x="0" y="4" text-anchor="middle" fill="#E5E9EC">21km · Cut</text>
+                    </g>
+                    <!-- H1 - H2: 24km (Midpoint 343, 290 -> Placed at 343, 300) -->
+                    <g data-edge="hospital-alpha,hospital-beta" transform="translate(343, 300)" filter="url(#badge-shadow)">
+                      <rect x="-32" y="-10" width="64" height="20" rx="10" fill="rgba(36, 42, 48, 0.92)" stroke="#71808B" stroke-width="1" />
+                      <text x="0" y="4" text-anchor="middle" fill="#E5E9EC">24km · Cut</text>
+                    </g>
+                    <!-- PN - H1: 22km (Midpoint 343, 198) -->
+                    <g data-edge="pharmacy-north,hospital-alpha" transform="translate(343, 198)" filter="url(#badge-shadow)">
+                      <rect x="-35" y="-10" width="70" height="20" rx="10" fill="rgba(36, 42, 48, 0.92)" stroke="#71808B" stroke-width="1" />
+                      <text x="0" y="4" text-anchor="middle" fill="#E5E9EC">22km · Alternate</text>
+                    </g>
+                  </g>
+
+                  <!-- Selected Minimum Spanning Tree Backbone Edges (Solid Coral & Charcoal Highlighted) -->
+                  <g class="edges-mst" stroke-linecap="round">
+                    <!-- Edge 1: Warehouse A to Pharmacy North (12km) -->
+                    <line data-edge="warehouse-a,pharmacy-north" x1="95" y1="75" x2="260" y2="140" stroke="#FF6542" stroke-width="3.5" />
+                    <line data-edge="warehouse-a,pharmacy-north" x1="95" y1="75" x2="260" y2="140" stroke="#F7F8F9" stroke-width="1.2" stroke-dasharray="8 8" class="pulse-flow" />
+
+                    <!-- Edge 2: Warehouse A to Pharmacy South (15km) -->
+                    <line data-edge="warehouse-a,pharmacy-south" x1="95" y1="75" x2="105" y2="270" stroke="#FF6542" stroke-width="3.5" />
+                    <line data-edge="warehouse-a,pharmacy-south" x1="95" y1="75" x2="105" y2="270" stroke="#F7F8F9" stroke-width="1.2" stroke-dasharray="8 8" class="pulse-flow" />
+
+                    <!-- Edge 3: Warehouse B to Pharmacy North (14km) -->
+                    <line data-edge="warehouse-b,pharmacy-north" x1="425" y1="70" x2="260" y2="140" stroke="#FF6542" stroke-width="3.5" />
+                    <line data-edge="warehouse-b,pharmacy-north" x1="425" y1="70" x2="260" y2="140" stroke="#F7F8F9" stroke-width="1.2" stroke-dasharray="8 8" class="pulse-flow" />
+
+                    <!-- Edge 4: Pharmacy North to Hospital Beta (16km) -->
+                    <line data-edge="pharmacy-north,hospital-beta" x1="260" y1="140" x2="260" y2="325" stroke="#FF6542" stroke-width="3.5" />
+                    <line data-edge="pharmacy-north,hospital-beta" x1="260" y1="140" x2="260" y2="325" stroke="#F7F8F9" stroke-width="1.2" stroke-dasharray="8 8" class="pulse-flow" />
+
+                    <!-- Edge 5: Warehouse B to Hospital Alpha (18km) -->
+                    <line data-edge="warehouse-b,hospital-alpha" x1="425" y1="70" x2="425" y2="255" stroke="#FF6542" stroke-width="3.5" />
+                    <line data-edge="warehouse-b,hospital-alpha" x1="425" y1="70" x2="425" y2="255" stroke="#F7F8F9" stroke-width="1.2" stroke-dasharray="8 8" class="pulse-flow" />
+                  </g>
+
+                  <!-- Active MST Weight Pills (Exact Midpoint Alignments) -->
+                  <g class="weight-tags-mst" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="600">
+                    <!-- Edge 1: 12km / $1.2k (Midpoint 178, 108) -->
+                    <g data-edge="warehouse-a,pharmacy-north" transform="translate(178, 108)" filter="url(#badge-shadow)">
+                      <rect x="-35" y="-12" width="70" height="24" rx="12" fill="#242A30" stroke="#FF6542" stroke-width="1.5" />
+                      <text x="0" y="4" text-anchor="middle" fill="#F7F8F9">12km · $1.2k</text>
+                    </g>
+
+                    <!-- Edge 2: 15km / $1.5k (Midpoint 100, 173) -->
+                    <g data-edge="warehouse-a,pharmacy-south" transform="translate(100, 173)" filter="url(#badge-shadow)">
+                      <rect x="-35" y="-12" width="70" height="24" rx="12" fill="#242A30" stroke="#FF6542" stroke-width="1.5" />
+                      <text x="0" y="4" text-anchor="middle" fill="#F7F8F9">15km · $1.5k</text>
+                    </g>
+
+                    <!-- Edge 3: 14km / $1.4k (Midpoint 343, 105) -->
+                    <g data-edge="warehouse-b,pharmacy-north" transform="translate(343, 105)" filter="url(#badge-shadow)">
+                      <rect x="-35" y="-12" width="70" height="24" rx="12" fill="#242A30" stroke="#FF6542" stroke-width="1.5" />
+                      <text x="0" y="4" text-anchor="middle" fill="#F7F8F9">14km · $1.4k</text>
+                    </g>
+
+                    <!-- Edge 4: 16km / $1.6k (Midpoint 260, 233) -->
+                    <g data-edge="pharmacy-north,hospital-beta" transform="translate(260, 233)" filter="url(#badge-shadow)">
+                      <rect x="-35" y="-12" width="70" height="24" rx="12" fill="#242A30" stroke="#FF6542" stroke-width="1.5" />
+                      <text x="0" y="4" text-anchor="middle" fill="#F7F8F9">16km · $1.6k</text>
+                    </g>
+
+                    <!-- Edge 5: 18km / $1.8k (Midpoint 425, 163) -->
+                    <g data-edge="warehouse-b,hospital-alpha" transform="translate(425, 163)" filter="url(#badge-shadow)">
+                      <rect x="-35" y="-12" width="70" height="24" rx="12" fill="#242A30" stroke="#FF6542" stroke-width="1.5" />
+                      <text x="0" y="4" text-anchor="middle" fill="#F7F8F9">18km · $1.8k</text>
+                    </g>
+                  </g>
+
+                  <!-- Network Nodes (Facilities: Warehouses, Pharmacies, Hospitals) -->
+                  <!-- 1. Warehouse A (Central Cold Hub) -->
+                  <g class="network-node" data-facility="warehouse-a" transform="translate(95, 75)" filter="url(#node-shadow)">
+                    <circle r="26" fill="#242A30" stroke="#FF6542" stroke-width="2.2" />
+                    <circle r="19" fill="#FF6542" />
+                    <!-- Warehouse Icon (Depot/Box) -->
+                    <path d="M-7 -4 L0 -8 L7 -4 L7 6 L-7 6 Z" fill="#242A30" />
+                    <text x="0" y="38" text-anchor="middle" font-family="'Sora', sans-serif" font-size="11" font-weight="700" fill="#F7F8F9">Warehouse A</text>
+                    <text x="0" y="50" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="10" font-weight="500" fill="#E5E9EC">Central Cold Hub</text>
+                  </g>
+
+                  <!-- 2. Warehouse B (Regional Depot) -->
+                  <g class="network-node" data-facility="warehouse-b" transform="translate(425, 70)" filter="url(#node-shadow)">
+                    <circle r="26" fill="#242A30" stroke="#FF6542" stroke-width="2.2" />
+                    <circle r="19" fill="#FF6542" />
+                    <path d="M-7 -4 L0 -8 L7 -4 L7 6 L-7 6 Z" fill="#242A30" />
+                    <text x="0" y="38" text-anchor="middle" font-family="'Sora', sans-serif" font-size="11" font-weight="700" fill="#F7F8F9">Warehouse B</text>
+                    <text x="0" y="50" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="10" font-weight="500" fill="#E5E9EC">Regional Depot</text>
+                  </g>
+
+                  <!-- 3. Pharmacy North (Clinical Dispensary) -->
+                  <g class="network-node" data-facility="pharmacy-north" transform="translate(260, 140)" filter="url(#node-shadow)">
+                    <circle r="24" fill="#242A30" stroke="#E5E9EC" stroke-width="2" />
+                    <circle r="17" fill="#E5E9EC" />
+                    <!-- Cross / Dispensary Icon -->
+                    <path d="M-5 -2 H-2 V-5 H2 V-2 H5 V2 H2 V5 H-2 V2 H-5 Z" fill="#242A30" />
+                    <text x="0" y="36" text-anchor="middle" font-family="'Sora', sans-serif" font-size="11" font-weight="700" fill="#F7F8F9">Pharmacy North</text>
+                    <text x="0" y="48" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="10" font-weight="500" fill="#E5E9EC">Dispensary</text>
+                  </g>
+
+                  <!-- 4. Pharmacy South (Specialty Care Clinic) -->
+                  <g class="network-node" data-facility="pharmacy-south" transform="translate(105, 270)" filter="url(#node-shadow)">
+                    <circle r="24" fill="#242A30" stroke="#E5E9EC" stroke-width="2" />
+                    <circle r="17" fill="#E5E9EC" />
+                    <path d="M-5 -2 H-2 V-5 H2 V-2 H5 V2 H2 V5 H-2 V2 H-5 Z" fill="#242A30" />
+                    <text x="0" y="36" text-anchor="middle" font-family="'Sora', sans-serif" font-size="11" font-weight="700" fill="#F7F8F9">Pharmacy South</text>
+                    <text x="0" y="48" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="10" font-weight="500" fill="#E5E9EC">Specialty Clinic</text>
+                  </g>
+
+                  <!-- 5. Hospital Alpha (Medical Center) -->
+                  <g class="network-node" data-facility="hospital-alpha" transform="translate(425, 255)" filter="url(#node-shadow)">
+                    <circle r="25" fill="#242A30" stroke="#FF6542" stroke-width="2" />
+                    <circle r="18" fill="#F7F8F9" />
+                    <!-- Hospital Cross -->
+                    <path d="M-6 -2 H-2 V-6 H2 V-2 H6 V2 H2 V6 H-2 V2 H-6 Z" fill="#FF6542" />
+                    <text x="0" y="36" text-anchor="middle" font-family="'Sora', sans-serif" font-size="11" font-weight="700" fill="#F7F8F9">Hospital Alpha</text>
+                    <text x="0" y="48" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="10" font-weight="500" fill="#E5E9EC">Medical Center</text>
+                  </g>
+
+                  <!-- 6. Hospital Beta (Acute Care Point) -->
+                  <g class="network-node" data-facility="hospital-beta" transform="translate(260, 325)" filter="url(#node-shadow)">
+                    <circle r="25" fill="#242A30" stroke="#FF6542" stroke-width="2" />
+                    <circle r="18" fill="#F7F8F9" />
+                    <path d="M-6 -2 H-2 V-6 H2 V-2 H6 V2 H2 V6 H-2 V2 H-6 Z" fill="#FF6542" />
+                    <text x="0" y="36" text-anchor="middle" font-family="'Sora', sans-serif" font-size="11" font-weight="700" fill="#F7F8F9">Hospital Beta</text>
+                    <text x="0" y="48" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="10" font-weight="500" fill="#E5E9EC">Acute Care Point</text>
+                  </g>
+                  </g> <!-- End of #network-graph-content -->
+                </svg>
+              </div>
+
+              <!-- Step-by-Step Playback Controller & Explanation Bar -->
+              <div class="network-step-bar glass-bar" id="step-bar">
+                <div class="step-controls">
+                  <button type="button" class="btn-step" id="btn-step-prev" title="Step Back" disabled>
+                    <span aria-hidden="true">&#9664;</span> Prev
+                  </button>
+                  <div class="step-counter" id="step-counter" aria-live="polite">
+                    <span class="step-num" id="current-step-num">Step 0</span>
+                    <span class="step-sep">/</span>
+                    <span class="step-total" id="total-step-num">9</span>
+                  </div>
+                  <button type="button" class="btn-step" id="btn-step-next" title="Step Forward">
+                    Next <span aria-hidden="true">&#9654;</span>
+                  </button>
+                  <button type="button" class="btn-step btn-step-reset" id="btn-step-reset" title="Reset to Start">
+                    Reset
+                  </button>
+                </div>
+
+                <!-- Step Info & Reason Pill -->
+                <div class="step-info" id="step-info">
+                  <span class="step-badge badge-ready" id="step-status-badge">Ready</span>
+                  <div class="step-text-wrap">
+                    <span class="step-corridor" id="step-corridor">Click 'Next' to evaluate first corridor</span>
+                    <span class="step-explanation" id="step-explanation">Trace Kruskal or Prim decisions directly from C.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Network Panel Footer Metrics -->
+              <div class="network-metrics-bar glass-bar">
+                <div class="metric-item">
+                  <span class="metric-label">Facilities</span>
+                  <span class="metric-val" id="metric-facilities">6 Nodes (V)</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                  <span class="metric-label">Candidate Lanes</span>
+                  <span class="metric-val" id="metric-candidates">9 Evaluated (E)</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                  <span class="metric-label">Backbone</span>
+                  <span class="metric-val highlight" id="metric-backbone">5 Active Lanes · Total Cost: 75</span>
+                </div>
+              </div>
+
+              <div class="network-legend glass-legend">
+                <div class="legend-entry">
+                  <span class="legend-color legend-warehouse"></span>
+                  <span>Warehouse</span>
+                </div>
+                <div class="legend-entry">
+                  <span class="legend-color legend-pharmacy"></span>
+                  <span>Pharmacy</span>
+                </div>
+                <div class="legend-entry">
+                  <span class="legend-color legend-hospital"></span>
+                  <span>Hospital</span>
+                </div>
+                <div class="legend-entry">
+                  <span class="legend-line legend-mst-line"></span>
+                  <span>MST Lane</span>
+                </div>
+                <div class="legend-entry">
+                  <span class="legend-line legend-cycle-line"></span>
+                  <span>Alternate</span>
+                </div>
+              </div>
+
+              <p class="network-caption">
+                Facilities are vertices. Feasible lanes are edges. This drawing explains the network model before and after minimum-cost spanning tree selection.
+              </p>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Below the Hero: Four Feature Cards & Project Overview -->
+      <section class="overview-section" id="workspace" aria-labelledby="overview-title">
+        <div class="container">
+          <div class="section-header section-header-dark reveal">
+            <div class="eyebrow eyebrow-dark">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Platform Capabilities</span>
+            </div>
+            <h2 id="overview-title" class="section-title text-white">Intelligent Cold-Chain Distribution</h2>
+            <p class="section-subtitle text-muted-steel">
+              Pharmaceutical logistics requires absolute temperature reliability and cycle-free route efficiency.
+              Explore four core capabilities engineered to minimize operational transit costs.
+            </p>
+          </div>
+
+          <!-- Four Feature Cards as Requested -->
+          <div class="features-quad-grid">
+            <!-- 1. Optimize Logistics -->
+            <article class="feature-card reveal">
+              <div class="feature-card-top">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" class="feature-svg">
+                    <path d="M3 17l6-6 4 4 8-8" stroke="#FF6542" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <polyline points="17 7 21 7 21 11" stroke="#FF6542" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                    <rect x="3" y="19" width="18" height="2" rx="1" fill="#E5E9EC" />
+                  </svg>
+                </div>
+                <span class="feature-tag">Cost Efficiency</span>
+              </div>
+              <h3 class="feature-heading">Optimize Logistics</h3>
+              <p class="feature-desc">
+                Eliminate redundant transit corridors and minimize transportation tariffs across cold-freight routes.
+                Mathematically reduce total route distances while maintaining strict refrigeration compliance.
+              </p>
+              <ul class="feature-bullets">
+                <li>Minimized total network operating cost</li>
+                <li>Zero redundant transit expenditures</li>
+                <li>Refrigeration tariff minimization</li>
+              </ul>
+            </article>
+
+            <!-- 2. Ensure Reachability -->
+            <article class="feature-card reveal">
+              <div class="feature-card-top">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" class="feature-svg">
+                    <circle cx="12" cy="12" r="9" stroke="#E5E9EC" stroke-width="2" />
+                    <circle cx="12" cy="12" r="4" fill="#FF6542" />
+                    <path d="M12 3v5M12 16v5M3 12h5M16 12h5" stroke="#9BA8B2" stroke-width="1.8" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <span class="feature-tag">Thermal Integrity</span>
+              </div>
+              <h3 class="feature-heading">Ensure Reachability</h3>
+              <p class="feature-desc">
+                Guarantee that every pharmacy dispensary and acute care hospital maintains a direct, unbroken cold supply link
+                back to primary storage hubs without isolated delivery points or fragile links.
+              </p>
+              <ul class="feature-bullets">
+                <li>100% facility network connectivity</li>
+                <li>Guaranteed 2°C–8°C thermal chain</li>
+                <li>Protected critical care deliveries</li>
+              </ul>
+            </article>
+
+            <!-- 3. Compare Algorithms -->
+            <article class="feature-card reveal">
+              <div class="feature-card-top">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" class="feature-svg">
+                    <rect x="4" y="4" width="7" height="7" rx="2" stroke="#E5E9EC" stroke-width="2" fill="none" />
+                    <rect x="13" y="13" width="7" height="7" rx="2" stroke="#FF6542" stroke-width="2" fill="none" />
+                    <path d="M11 7.5h2M7.5 11v2M13 16.5h-2M16.5 13v-2" stroke="#9BA8B2" stroke-width="1.6" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <span class="feature-tag">Dual Engine</span>
+              </div>
+              <h3 class="feature-heading">Compare Algorithms</h3>
+              <p class="feature-desc">
+                Benchmark Kruskal’s global edge-sorting against Prim’s local priority-queue expansion. Evaluate time complexity,
+                memory footprint, and algorithmic suitability for sparse or dense topologies.
+              </p>
+              <ul class="feature-bullets">
+                <li>Kruskal O(E log E) vs Prim O(E log V)</li>
+                <li>Sparse regional vs dense urban fit</li>
+                <li>Identical optimal tree total cost</li>
+              </ul>
+            </article>
+
+            <!-- 4. Visualize Results -->
+            <article class="feature-card reveal">
+              <div class="feature-card-top">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" class="feature-svg">
+                    <circle cx="6" cy="6" r="3" stroke="#E5E9EC" stroke-width="2" />
+                    <circle cx="18" cy="7" r="3" stroke="#FF6542" stroke-width="2" />
+                    <circle cx="12" cy="18" r="3" stroke="#E5E9EC" stroke-width="2" />
+                    <line x1="8.6" y1="7.4" x2="15.4" y2="6.6" stroke="#9BA8B2" stroke-width="1.8" />
+                    <line x1="7.4" y1="8.6" x2="10.6" y2="15.4" stroke="#FF6542" stroke-width="2" />
+                    <line x1="16.6" y1="9.4" x2="13.4" y2="15.6" stroke="#9BA8B2" stroke-width="1.8" />
+                  </svg>
+                </div>
+                <span class="feature-tag">Interactive Canvas</span>
+              </div>
+              <h3 class="feature-heading">Visualize Results</h3>
+              <p class="feature-desc">
+                Inspect graph structures interactively on an intuitive graphical canvas. Trace step-by-step edge evaluations,
+                view Union-Find component merges, and review auditable route distribution schedules.
+              </p>
+              <ul class="feature-bullets">
+                <li>Interactive facility topology inspection</li>
+                <li>Step-by-step decision scrubbing</li>
+                <li>Comprehensive distribution reports</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Problem Context Cards -->
+          <div class="overview-grid" style="margin-top: 48px;">
+            <article class="overview-card reveal">
+              <div class="card-num-badge">01</div>
+              <h3 class="card-title">Goods That Cannot Drift</h3>
+              <p class="card-body">
+                Vaccines, biologics, insulin, and blood products require a strict 2°C to 8°C thermal threshold from
+                central storage to points of care. Every extra kilometer and transfer point adds thermal hazard, monitoring
+                expenses, and spoilage risk. A cheap route that fails temperature compliance is a failed route.
+              </p>
+            </article>
+
+            <article class="overview-card reveal">
+              <div class="card-num-badge">02</div>
+              <h3 class="card-title">Three Vital Facility Tiers</h3>
+              <p class="card-body">
+                The network unites bulk storage Warehouses, local dispensing Pharmacies, and high-demand acute Hospitals.
+                Planning begins by modeling every facility as a vertex in an undirected, weighted logistics graph,
+                evaluating real-world road corridors, refrigeration tariffs, and distance costs between every facility pair.
+              </p>
+            </article>
+
+            <article class="overview-card reveal">
+              <div class="card-num-badge">03</div>
+              <h3 class="card-title">Cycle Elimination & Minimum Cost</h3>
+              <p class="card-body">
+                Redundant transit loops add vehicle maintenance, driver tariffs, and cooling power without extending access.
+                A cycle-free tree with exactly V - 1 links provides universal facility reachability. The optimization goal
+                is to construct the single tree that minimizes total network weight.
+              </p>
+            </article>
+          </div>
+
+          <!-- Theoretical & Practical Callout -->
+          <div class="overview-callout reveal">
+            <div class="callout-accent-bar" aria-hidden="true"></div>
+            <div class="callout-content">
+              <h4 class="callout-title">Mathematical Optimality Guarantee</h4>
+              <p class="callout-text">
+                That cheapest connecting tree is a <strong>Minimum Spanning Tree (MST)</strong>. On any connected,
+                undirected graph, both <strong>Kruskal’s algorithm</strong> and <strong>Prim’s algorithm</strong> are
+                mathematically proven to find a globally optimal solution. Even when edge weight ties produce different
+                branch choices, both algorithms produce the exact same minimum total expenditure.
+              </p>
+            </div>
+            <div class="callout-stat">
+              <span class="callout-stat-number">100%</span>
+              <span class="callout-stat-desc">Facility Reachability</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section: Three Clear Steps (Dark Charcoal Section) -->
+      <section class="process-section" id="algorithms" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-header section-header-dark reveal">
+            <div class="eyebrow eyebrow-dark">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Workflow Architecture</span>
+            </div>
+            <h2 id="process-title" class="section-title text-white">How It Works</h2>
+            <p class="section-subtitle text-muted-steel">
+              From an arbitrary facility network to an optimized, cycle-free cold distribution backbone in three clear steps.
+            </p>
+          </div>
+
+          <!-- Three Steps as Requested -->
+          <div class="steps-grid">
+            <!-- Step 1: Build Your Network -->
+            <article class="step-card reveal">
+              <div class="step-badge">Step 01</div>
+              <div class="step-content">
+                <h3 class="step-title">Build Your Network</h3>
+                <p class="step-desc">
+                  Plot your facilities as graph vertices: designate central storage Warehouses, local dispensing Pharmacies,
+                  and acute care Hospitals. Connect potential transit routes with weighted undirected edges representing
+                  actual road distances, refrigeration tariffs, and transit fuel costs.
+                </p>
+                <div class="step-tag-row">
+                  <span class="step-tag">V Facilities</span>
+                  <span class="step-tag">E Candidate Lanes</span>
+                  <span class="step-tag">Weighted Graph G = (V, E)</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Step 2: Run Algorithms -->
+            <article class="step-card reveal">
+              <div class="step-badge">Step 02</div>
+              <div class="step-content">
+                <h3 class="step-title">Run Algorithms</h3>
+                <p class="step-desc">
+                  Trigger your chosen minimum spanning tree engine. Kruskal sorts all candidate lanes globally and adds
+                  edges greedily using Disjoint-Set Union (Union-Find) to reject cycles. Prim anchors at a primary warehouse
+                  and expands iteratively across the cut using an indexed minimum priority queue.
+                </p>
+                <div class="step-tag-row">
+                  <span class="step-tag">Greedy Selection</span>
+                  <span class="step-tag">Cycle Detection</span>
+                  <span class="step-tag">O(E log V) Bound</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Step 3: Analyze Results -->
+            <article class="step-card reveal">
+              <div class="step-badge">Step 03</div>
+              <div class="step-content">
+                <h3 class="step-title">Analyze Results</h3>
+                <p class="step-desc">
+                  Inspect the finalized distribution backbone. Confirm that exactly V - 1 links connect all facilities
+                  with zero cycles, review the edge selection log, verify temperature compliance coverage, and measure
+                  overall transportation budget reductions against the unoptimized mesh.
+                </p>
+                <div class="step-tag-row">
+                  <span class="step-tag">V - 1 Optimal Edges</span>
+                  <span class="step-tag">100% Reachability</span>
+                  <span class="step-tag">Audit-Ready Export</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Algorithm Comparison Subsection -->
+          <div class="comparison-block" id="comparison">
+            <div class="section-header section-header-dark reveal">
+              <div class="eyebrow eyebrow-dark">
+                <span class="eyebrow-dot" aria-hidden="true"></span>
+                <span>Algorithm Comparison</span>
+              </div>
+              <h3 class="section-title text-white">Same Optimum, Two Distinct Constructions</h3>
+              <p class="section-subtitle text-muted-steel">
+                Both Kruskal and Prim achieve the identical minimum total cost. The ideal choice depends on network density.
+              </p>
+            </div>
+
+            <div class="comparison-grid">
+              <!-- Kruskal Card -->
+              <article class="comparison-card reveal">
+                <div class="comp-header">
+                  <div class="comp-badge">Edge-Centric Strategy</div>
+                  <h4 class="comp-name">Kruskal’s Algorithm</h4>
+                </div>
+                <p class="comp-summary">
+                  Considers edges globally across the entire logistics graph. Candidate lanes are sorted by non-decreasing
+                  weight and scanned sequentially. An edge is accepted only when its endpoints reside in different connected
+                  components, verified using a Disjoint-Set Union (Union-Find) data structure.
+                </p>
+                <div class="comp-specs">
+                  <div class="spec-row">
+                    <span class="spec-label">Time Complexity:</span>
+                    <span class="spec-val">O(E log E) or O(E log V)</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Core Data Structure:</span>
+                    <span class="spec-val">Disjoint-Set (Union-Find)</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Optimal Topology:</span>
+                    <span class="spec-val highlight-coral">Sparse Facility Networks</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Growth Mechanics:</span>
+                    <span class="spec-val">Forest of trees merging into one</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Prim Card -->
+              <article class="comparison-card reveal">
+                <div class="comp-header">
+                  <div class="comp-badge">Vertex-Centric Strategy</div>
+                  <h4 class="comp-name">Prim’s Algorithm</h4>
+                </div>
+                <p class="comp-summary">
+                  Grows a single connected tree outwards starting from a chosen root facility (e.g., Central Warehouse A).
+                  At every step, the algorithm inspects the cut between explored and unexplored nodes, extracting the
+                  cheapest crossing edge using a binary min-priority queue until all facilities are absorbed.
+                </p>
+                <div class="comp-specs">
+                  <div class="spec-row">
+                    <span class="spec-label">Time Complexity:</span>
+                    <span class="spec-val">O((V + E) log V) with Min-Heap</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Core Data Structure:</span>
+                    <span class="spec-val">Priority Queue (Min-Heap)</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Optimal Topology:</span>
+                    <span class="spec-val highlight-coral">Dense Metropolitan Networks</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Growth Mechanics:</span>
+                    <span class="spec-val">Single tree expanding continuously</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Algorithm Complexity Comparison Table -->
+            <div class="comp-table-card reveal">
+              <div class="table-responsive">
+                <table class="comp-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Evaluation Metric</th>
+                      <th scope="col">Kruskal's Algorithm</th>
+                      <th scope="col">Prim's Algorithm</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Primary Graph Structure</strong></td>
+                      <td>Edge List (Sorted globally)</td>
+                      <td>Adjacency List / Matrix (Local neighborhood)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Time Complexity (Worst)</strong></td>
+                      <td><code class="code-pill">O(E log E)</code></td>
+                      <td><code class="code-pill">O((V + E) log V)</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Auxiliary Space</strong></td>
+                      <td><code class="code-pill">O(V + E)</code> (Parent & Rank)</td>
+                      <td><code class="code-pill">O(V)</code> (Min-Heap & Keys)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Cold-Chain Best Fit</strong></td>
+                      <td>Cross-regional networks with sparse candidate highways</td>
+                      <td>Dense urban medical districts with numerous cross-streets</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Cycle Prevention</strong></td>
+                      <td>Union-Find <code>find()</code> path compression test</td>
+                      <td>Visited vertex tracking array (Intrinsic)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="about">
+      <div class="container footer-grid">
+        <!-- Brand & Description -->
+        <div class="footer-col-brand">
+          <a class="logo" href="#home" aria-label="ColdChain Optimizer Home">
+            <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect width="32" height="32" rx="8" fill="#242A30" />
+              <circle cx="8" cy="16" r="3.2" fill="#FF6542" />
+              <circle cx="19" cy="8.5" r="2.5" fill="#F7F8F9" />
+              <circle cx="24" cy="22.5" r="2.5" fill="#F7F8F9" />
+              <path
+                d="M10.8 14.8 L16.8 10 M10.8 17.2 L21.6 21.6"
+                stroke="#FF6542"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+            <span class="logo-word">ColdChain <span class="logo-sub">Optimizer</span></span>
+          </a>
+          <p class="footer-desc">
+            A design and analysis of algorithms initiative engineering minimum-cost, temperature-resilient
+            distribution networks for modern pharmaceutical logistics.
+          </p>
+          <div class="footer-tag-list">
+            <span class="footer-chip">Graph Theory</span>
+            <span class="footer-chip">Kruskal MST</span>
+            <span class="footer-chip">Prim MST</span>
+            <span class="footer-chip">Cold Chain Logistics</span>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-col-nav">
+          <p class="footer-heading">Navigation</p>
+          <ul class="footer-nav-list">
+            <li><a class="footer-link" href="#home">Home</a></li>
+            <li><a class="footer-link" href="#workspace">Workspace</a></li>
+            <li><a class="footer-link" href="#algorithms">Algorithms</a></li>
+            <li><a class="footer-link" href="#comparison">Comparison</a></li>
+            <li><a class="footer-link" href="#about">About Project</a></li>
+          </ul>
+        </div>
+
+        <!-- About Project Details -->
+        <div class="footer-col-about">
+          <p class="footer-heading">About The Project</p>
+          <p class="footer-about-text">
+            ColdChain Optimizer applies classic greedy graph algorithms to solve the critical logistics challenge of
+            medical cold-chain transit. By computing exact minimum spanning trees over facility graphs, the application
+            demonstrates how algorithmic efficiency safeguards biologics and vaccines while minimizing transportation expenditures.
+          </p>
+          <div class="footer-badge-box">
+            <span class="footer-badge-label">Algorithmic Foundation</span>
+            <span class="footer-badge-val">Greedy Method · MST Optimization</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="container footer-bottom">
+        <p class="footer-copy">© <span data-year>2026</span> ColdChain Optimizer. Built for precision cold-chain distribution.</p>
+        <p class="footer-note">Undirected Weighted Minimum Spanning Tree Architecture</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
